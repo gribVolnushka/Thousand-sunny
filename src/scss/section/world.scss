@@ -1,0 +1,39 @@
+.world {
+  padding-top: 143px;
+  padding-bottom: 146px;
+}
+
+.world__container {
+  display: flex;
+  gap: 102px;
+  align-items: center;
+}
+
+.world__content {
+  width: 480px;
+}
+
+.title__world {
+  @include title();
+  line-height: calc(50 / 36);
+  margin-bottom: 20px;
+}
+
+.world__text {
+  font-weight: 300;
+  font-size: 17px;
+  line-height: calc(30 / 17);
+  color: map-get($colors,"medium-grey");
+  margin-bottom: 39px;
+}
+
+.world__button {
+  @include button();
+  min-width: 164px;
+  padding: 10px 37px 10px 39px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+}
+

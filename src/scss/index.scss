@@ -1,4 +1,12 @@
 @import "utils/reset";
-body {
-  background-color: red;
-}
+@import "general";
+@import "section/mixin";
+@import "section/map";
+@import "section/header";
+@import "section/hero";
+@import "section/world";
+@import "section/destinations";
+@import "section/guides";
+@import "section/testimonials";
+@import "section/stories";
+@import "section/footer";

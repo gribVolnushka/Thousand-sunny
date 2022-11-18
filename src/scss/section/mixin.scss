@@ -1,0 +1,10 @@
+@mixin button() {
+  color: #FFFF;
+  background-color: #FB8F1D;
+}
+
+@mixin title() {
+  font-weight: 700;
+  font-size: 36px;
+  color: #000000;
+}

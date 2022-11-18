@@ -1,0 +1,67 @@
+.hero__section {
+  padding-bottom: 143px;
+}
+
+.container__hero {
+  display: flex;
+  gap: 147px;
+}
+
+.hero__content {
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__title {
+  color: map-get($colors,"blue");
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.2;
+  margin-bottom: 74px;
+}
+
+.hero__text {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: calc(27 / 22);
+  color: map-get($colors,"blue");
+  margin-bottom: 48px;
+}
+
+.hero__text::after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 2px;
+  background-color: #202336;
+  margin-top: 21px;
+}
+
+.hero__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 35px;
+}
+
+.hero__select {
+  min-width: 220px;
+  padding: 21px 31px;
+  font-size: 15px;
+  line-height: calc(32 / 15);
+  color: map-get($colors,"dark-grey");
+}
+
+.hero__button {
+  @include button();
+  width: 180px;
+  padding: 15px 59px;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 1.2;
+  border-radius: 8px;
+}
+
+
+

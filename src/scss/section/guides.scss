@@ -1,0 +1,38 @@
+.guides {
+  padding-top: 115px;
+  padding-bottom: 124px;
+}
+
+.guides__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content__guides {
+  width: 410px;
+}
+
+.guides__title {
+  @include title();
+  line-height: calc(50/36);
+  margin-bottom: 20px;
+}
+
+.guides__text {
+  font-weight: 300;
+  font-size: 17px;
+  line-height: calc(30 / 17);
+  color: map-get($colors,"medium-grey");
+  margin-bottom: 39px;
+}
+
+.guides__button {
+  @include button();
+  min-width: 164px;
+  padding:  13px 43px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.2;
+  border-radius: 8px;
+}
