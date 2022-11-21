@@ -1,6 +1,20 @@
 .guides {
   padding-top: 115px;
   padding-bottom: 124px;
+  background-image: url("../static/Image/circle.svg"),
+                    url("../static/Image/plus_testimonials.svg"),
+                    url("../static/Image/plus-2.svg");
+  background-repeat: no-repeat;
+  background-position: left 490px top 175px, right 300px top 135px,
+                       bottom 250px left 850px;
+}
+
+@media screen and (max-width: 1260px) {
+  .guides {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background-image: unset;
+  }
 }
 
 .guides__container {
@@ -9,13 +23,34 @@
   align-items: center;
 }
 
-.content__guides {
+@media screen and (max-width: 960px) {
+  .guides__container {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+.guides__content {
   width: 410px;
+}
+
+@media screen and (max-width: 1260px) {
+  .guides__content {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .guides__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .guides__title {
   @include title();
-  line-height: calc(50/36);
   margin-bottom: 20px;
 }
 
@@ -27,6 +62,20 @@
   margin-bottom: 39px;
 }
 
+@media screen and (max-width: 1260px) {
+  .guides__text {
+    font-size: 19px;
+    margin-bottom: 29px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .guides__text {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
 .guides__button {
   @include button();
   min-width: 164px;
@@ -35,4 +84,16 @@
   font-size: 16px;
   line-height: 1.2;
   border-radius: 8px;
+}
+
+@media screen and (max-width: 1260px) {
+  .guides__image {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .guides__image {
+    width: 100%;
+  }
 }

@@ -3,6 +3,13 @@
   padding-bottom: 94px;
 }
 
+@media screen and (max-width: 1260px) {
+  .header {
+    padding-top: 35px;
+    padding-bottom: 60px;
+  }
+}
+
 .container__header {
   display: flex;
   align-items: center;
@@ -14,10 +21,23 @@
   gap: 34px;
 }
 
+@media screen and (max-width: 960px) {
+  .header__nav {
+    gap: 80px;
+  }
+}
+
+
 .header__list {
   display: flex;
   gap: 35px;
   align-items: center;
+}
+
+@media screen and (max-width: 960px) {
+  .header__list {
+    gap: 20px;
+  }
 }
 
 .header__link {
@@ -44,6 +64,13 @@
   font-weight: 500;
   font-size: 15px;
   line-height: 1.2;
+}
+
+@media screen and (max-width: 960px) {
+  .header__button {
+    min-width: 100px;
+    padding: 10px 20px;
+  }
 }
 
 .header__button--first {

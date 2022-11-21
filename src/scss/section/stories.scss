@@ -1,6 +1,24 @@
 .stories {
   padding-top: 139px;
   padding-bottom: 271px ;
+  background-image: url("../static/Image/circle.svg"),
+                    url("../static/Image/circle.svg");
+  background-repeat: no-repeat;
+  background-position: left 300px bottom 440px, right 800px bottom 180px;
+}
+
+@media screen and (max-width: 1260px) {
+  .stories {
+    padding-top: 45px;
+    padding-bottom: 40px;
+    background-image: unset;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .stories {
+    padding-bottom: 10px;
+  }
 }
 
 .stories__wrapper {
@@ -12,7 +30,6 @@
 
 .stories__title {
   @include title();
-  line-height: calc(50 / 36);
 }
 
 .stories__logo-link {
@@ -24,22 +41,61 @@
 
 .stories__list {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 1260px) {
+  .stories__list {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
 
 .stories__item {
-  width: 271px;
+  width: 270px;
+}
+
+@media screen and (max-width: 1260px) {
+  .stories__item {
+    width: 38%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .stories__item {
+    width: 45%;
+  }
+}
+
+.stories__wrapper-image {
+  height: 233px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1260px) {
+  .stories__wrapper-image {
+    height: 203px;
+  }
 }
 
 .stories__image {
+  height: 100%;
   width: 100%;
-  height: 233px;
+  border-radius: 10px;
 }
 
 .stories__list-content {
   padding: 13px 35px 5px 0;
+}
+
+@media screen and (max-width: 1260px) {
+  .stories__list-content {
+    width: 100%;
+    padding: 5px;
+  }
 }
 
 .stories__subtitle {
@@ -50,12 +106,41 @@
   margin-bottom: 13px;
 }
 
+@media screen and (max-width: 1260px) {
+  .stories__subtitle {
+    font-size: 17px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical ;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .stories__subtitle {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+}
+
 .stories__text {
   font-size: 15px;
   line-height: calc(26 / 15);
   margin-bottom: 26px;
   color: map-get($colors,"medium-grey");
 }
+
+@media screen and (max-width: 1260px) {
+  .stories__text {
+    margin-bottom: 10px;
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical ;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+}
+
 
 .stories__link {
   color: map-get($colors,"orange");

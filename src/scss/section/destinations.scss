@@ -1,6 +1,26 @@
 .destinations {
   padding-top: 146px;
   padding-bottom: 116px;
+  background-image: url("../static/Image/circle.svg"),
+                    url("../static/Image/plus_testimonials.svg"),
+                    url("../static/Image/circle.svg");
+  background-repeat: no-repeat;
+  background-position: right 650px top 100px, left 320px bottom 250px,
+bottom 50px left 950px;
+}
+
+@media screen and (max-width: 1260px) {
+  .destinations {
+    padding-top: 70px;
+    padding-bottom: 26px;
+    background-image: unset;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .destinations {
+    padding-top: 20px;
+  }
 }
 
 .destinations__wrapper {
@@ -10,9 +30,14 @@
   margin-bottom: 41px;
 }
 
+@media screen and (max-width: 960px) {
+  .destinations__wrapper {
+    margin-bottom: 25px;
+  }
+}
+
 .destinations__title {
   @include title();
-  line-height: calc(50 / 36);
 }
 
 .destinations__link {
@@ -28,12 +53,20 @@
   justify-content: center;
 }
 
+@media screen and (max-width: 960px) {
+  .destinations__list {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
 .destinations__item {
   position: relative;
 }
 
 .destinations__image {
   width: 100%;
+  border-radius: 10px;
 }
 
 .list__text {

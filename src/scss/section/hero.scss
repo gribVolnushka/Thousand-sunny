@@ -2,9 +2,28 @@
   padding-bottom: 143px;
 }
 
+@media screen and (max-width: 1260px) {
+  .hero__section {
+    padding-bottom: 72px;
+  }
+}
+
 .container__hero {
   display: flex;
   gap: 147px;
+}
+
+@media screen and (max-width: 1380px) {
+  .container__hero {
+    gap: 100px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .container__hero {
+    gap: 30px;
+    flex-wrap: wrap;
+  }
 }
 
 .hero__content {
@@ -13,20 +32,57 @@
   flex-direction: column;
 }
 
+
+@media screen and (max-width: 1380px) {
+  .hero__content {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .hero__content {
+    width: 47%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .hero__content {
+    width: 100%;
+  }
+}
+
 .hero__title {
   color: map-get($colors,"blue");
   font-weight: 700;
-  font-size: 64px;
+  font-size: 6.4rem;
   line-height: 1.2;
   margin-bottom: 74px;
 }
 
+@media screen and (max-width: 1260px) {
+  .hero__title {
+    font-size: 5.4rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .hero__title {
+    margin-bottom: 25px;
+  }
+}
+
 .hero__text {
   font-weight: 600;
-  font-size: 22px;
+  font-size: 2.2rem;
   line-height: calc(27 / 22);
   color: map-get($colors,"blue");
   margin-bottom: 48px;
+}
+
+@media screen and (max-width: 960px) {
+  .hero__text {
+    margin-bottom: 30px;
+  }
 }
 
 .hero__text::after {
@@ -43,15 +99,36 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 30px;
   row-gap: 35px;
+  margin-bottom: 55px;
 }
 
+@media screen and (max-width: 960px) {
+  .hero__form {
+    margin-bottom: 30px;
+  }
+}
+
+
 .hero__select {
+  -webkit-appearance: none;
+  background-image: url("../static/Image/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px top 23px;
   min-width: 220px;
-  padding: 21px 31px;
-  font-size: 15px;
-  line-height: calc(32 / 15);
+  padding: 15px 31px;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  border-radius: 6px;
   color: map-get($colors,"dark-grey");
 }
+
+@media screen and (max-width: 1260px) {
+  .hero__select {
+    min-width: 180px;
+    padding: 15px 21px;
+  }
+}
+
 
 .hero__button {
   @include button();
@@ -63,5 +140,22 @@
   border-radius: 8px;
 }
 
+@media screen and (max-width: 1380px) {
+  .hero__image {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .hero__image {
+    width: 46%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .hero__image {
+    width: 100%;
+  }
+}
 
 

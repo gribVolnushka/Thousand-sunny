@@ -1,6 +1,23 @@
 .world {
   padding-top: 143px;
   padding-bottom: 146px;
+  background-image: url("../static/Image/circle.svg");
+  background-repeat: no-repeat;
+  background-position: bottom 300px right 550px;
+}
+
+@media screen and (max-width: 1260px) {
+  .world {
+    padding-top: 60px;
+    padding-bottom: 26px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .world {
+    padding-top: 10px;
+    background-image: unset;
+  }
 }
 
 .world__container {
@@ -9,13 +26,52 @@
   align-items: center;
 }
 
+@media screen and (max-width: 1260px) {
+  .world__container {
+    gap: 70px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .world__container {
+    gap: 30px;
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .world__image {
+    width: 47%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .world__image {
+    width: 100%;
+  }
+}
+
 .world__content {
   width: 480px;
 }
 
-.title__world {
+@media screen and (max-width: 1260px) {
+  .world__content {
+    width: 43%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .world__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.world__title {
   @include title();
-  line-height: calc(50 / 36);
   margin-bottom: 20px;
 }
 
@@ -26,6 +82,21 @@
   color: map-get($colors,"medium-grey");
   margin-bottom: 39px;
 }
+
+@media screen and (max-width: 1260px) {
+  .world__text {
+    font-size: 19px;
+    margin-bottom: 29px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .world__text {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
 
 .world__button {
   @include button();

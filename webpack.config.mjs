@@ -21,7 +21,7 @@ export default (_, { mode }) => {
       hot: true,
       port: 3000,
       static: {
-        directory: join(__dirname),
+        directory: join(__dirname, "static"),
       },
       historyApiFallback: true,
     },
@@ -43,11 +43,6 @@ export default (_, { mode }) => {
         {
           test: /\.(png|jpe?g|gif|svg)$/i,
           type: 'asset/resource', // use /inline if dont work
-          parser: {
-            dataUrlCondition: {
-              limit: 30 * 1024,
-            },
-          },
         },
         {
           test: /\.(woff|woff2|eot|ttf|otf)$/i,
