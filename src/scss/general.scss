@@ -10,23 +10,21 @@ html {
   width: 1307px;
   margin-left: auto;
   margin-right: auto;
-}
 
-@media screen and (max-width: 1380px) {
-  .container-lg {
-    width: 95%;
+  @include wide-screen-desktop() {
+    width: 85%;
   }
-}
 
-@media screen and (max-width: 1260px) {
-  .container-lg {
+  @include media-screen-desktop() {
     width: 90%;
   }
-}
 
-@media screen and (max-width: 960px) {
-  .container-lg {
+  @include small-screen-desktop() {
     width: 87%;
+  }
+
+  @include mobile-screen-desktop() {
+    width: 92%;
   }
 }
 
@@ -34,22 +32,16 @@ html {
   width: 1242px;
   margin-right: auto;
   margin-left: auto;
-}
 
-@media screen and (max-width: 1380px) {
-  .container {
+  @include wide-screen-desktop() {
     width: 90%;
   }
-}
 
-@media screen and (max-width: 1260px) {
-  .container {
+  @include media-screen-desktop() {
     width: 95%;
   }
-}
 
-@media screen and (max-width: 960px) {
-  .container {
+  @include small-screen-desktop() {
     width: 90%;
   }
 }
@@ -58,29 +50,30 @@ html {
   width: 1129px;
   margin-left: auto;
   margin-right: auto;
-}
 
-@media screen and (max-width: 1260px) {
-  .container-small {
+  @include media-screen-desktop() {
+    width: 90%;
+  }
+
+  @include small-screen-desktop() {
+    width: 85%;
+  }
+
+  @include mobile-screen-desktop() {
     width: 90%;
   }
 }
 
-@media screen and (max-width: 960px) {
-  .container-small {
-    width: 85%;
-  }
-}
-
-.hero {
-  background-image: url("../static/Image/circle.svg"),
-                    url("../static/Image/circle.svg");
-  background-repeat: no-repeat;
-  background-position: bottom 475px left 230px, bottom 160px left 930px ;
-}
-
-@media screen and (max-width: 1380px) {
   .hero {
-    background-image: unset;
+    background-image: url("../static/Image/circle.svg"),
+    url("../static/Image/circle.svg");
+    background-repeat: no-repeat;
+    background-position: bottom 475px left 230px, bottom 160px left 930px ;
+
+    @include wide-screen-desktop() {
+      background-image: unset;
+    }
   }
-}
+
+
+

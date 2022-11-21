@@ -9,3 +9,35 @@
   line-height: calc(50 / 36);
   color: #000000;
 }
+
+@mixin mobile-title() {
+  font-size: 30px;
+  line-height: 1.2;
+  color: #000000;
+  font-weight: 700;
+}
+
+@mixin wide-screen-desktop() {
+  @media screen and (max-width: 1380px) {
+    @content
+  }
+}
+
+@mixin media-screen-desktop() {
+  @media screen and (max-width: 1260px) {
+    @content
+  }
+}
+
+@mixin small-screen-desktop() {
+  @media screen and (max-width: 960px) {
+    @content
+  }
+}
+
+@mixin mobile-screen-desktop() {
+  @media screen and (max-width: 768px) {
+    @content
+  }
+}
+

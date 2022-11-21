@@ -4,17 +4,13 @@
   background-image: url("../static/Image/circle.svg");
   background-repeat: no-repeat;
   background-position: bottom 300px right 550px;
-}
 
-@media screen and (max-width: 1260px) {
-  .world {
+  @include media-screen-desktop() {
     padding-top: 60px;
     padding-bottom: 26px;
   }
-}
 
-@media screen and (max-width: 960px) {
-  .world {
+  @include small-screen-desktop() {
     padding-top: 10px;
     background-image: unset;
   }
@@ -24,18 +20,18 @@
   display: flex;
   gap: 102px;
   align-items: center;
-}
 
-@media screen and (max-width: 1260px) {
-  .world__container {
+  @include media-screen-desktop() {
     gap: 70px;
   }
-}
 
-@media screen and (max-width: 960px) {
-  .world__container {
+  @include small-screen-desktop() {
     gap: 30px;
     flex-direction: column-reverse;
+  }
+
+  @include mobile-screen-desktop() {
+    gap: 20px;
   }
 }
 
@@ -53,26 +49,25 @@
 
 .world__content {
   width: 480px;
-}
 
-@media screen and (max-width: 1260px) {
-  .world__content {
+  @include media-screen-desktop() {
     width: 43%;
   }
-}
 
-@media screen and (max-width: 960px) {
-  .world__content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  @include small-screen-desktop() {
+    width: 43%;
   }
 }
 
 .world__title {
   @include title();
   margin-bottom: 20px;
+
+  @include mobile-screen-desktop() {
+    @include mobile-title();
+    text-align: center;
+    margin-bottom: 10px;
+  }
 }
 
 .world__text {
@@ -81,22 +76,22 @@
   line-height: calc(30 / 17);
   color: map-get($colors,"medium-grey");
   margin-bottom: 39px;
-}
 
-@media screen and (max-width: 1260px) {
-  .world__text {
+  @include media-screen-desktop() {
     font-size: 19px;
     margin-bottom: 29px;
   }
-}
 
-@media screen and (max-width: 960px) {
-  .world__text {
+  @include small-screen-desktop() {
     text-align: center;
     margin-bottom: 20px;
   }
-}
 
+  @include mobile-screen-desktop() {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+}
 
 .world__button {
   @include button();
@@ -106,5 +101,12 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
+
+  @include mobile-screen-desktop() {
+    width: 150px;
+    padding: 10px 30px;
+    line-height: 1.2;
+  }
 }
+
 

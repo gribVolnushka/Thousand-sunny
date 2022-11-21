@@ -7,13 +7,15 @@
   background-repeat: no-repeat;
   background-position: left 490px top 175px, right 300px top 135px,
                        bottom 250px left 850px;
-}
 
-@media screen and (max-width: 1260px) {
-  .guides {
+  @include media-screen-desktop() {
     padding-top: 40px;
     padding-bottom: 20px;
     background-image: unset;
+  }
+
+  @include mobile-screen-desktop() {
+    padding-top: 10px;
   }
 }
 
@@ -21,27 +23,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-@media screen and (max-width: 960px) {
-  .guides__container {
+  @include small-screen-desktop() {
     flex-wrap: wrap;
     gap: 20px;
+  }
+
+  @include mobile-screen-desktop() {
+    flex-direction: column;
   }
 }
 
 .guides__content {
   width: 410px;
-}
 
-@media screen and (max-width: 1260px) {
-  .guides__content {
+  @include media-screen-desktop() {
     width: 40%;
   }
-}
 
-@media screen and (max-width: 960px) {
-  .guides__content {
+  @include small-screen-desktop() {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -52,6 +52,12 @@
 .guides__title {
   @include title();
   margin-bottom: 20px;
+
+  @include mobile-screen-desktop() {
+    @include mobile-title();
+    text-align: center;
+    margin-bottom: 10px;
+  }
 }
 
 .guides__text {
@@ -60,17 +66,18 @@
   line-height: calc(30 / 17);
   color: map-get($colors,"medium-grey");
   margin-bottom: 39px;
-}
 
-@media screen and (max-width: 1260px) {
-  .guides__text {
+  @include media-screen-desktop() {
     font-size: 19px;
     margin-bottom: 29px;
   }
-}
 
-@media screen and (max-width: 960px) {
-  .guides__text {
+  @include small-screen-desktop() {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  @include mobile-screen-desktop() {
     text-align: center;
     margin-bottom: 20px;
   }
@@ -84,6 +91,11 @@
   font-size: 16px;
   line-height: 1.2;
   border-radius: 8px;
+
+  @include mobile-screen-desktop() {
+    width: 150px;
+    padding: 10px 30px;
+  }
 }
 
 @media screen and (max-width: 1260px) {

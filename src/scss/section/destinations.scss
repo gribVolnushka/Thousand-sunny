@@ -6,19 +6,15 @@
                     url("../static/Image/circle.svg");
   background-repeat: no-repeat;
   background-position: right 650px top 100px, left 320px bottom 250px,
-bottom 50px left 950px;
-}
+                        bottom 50px left 950px;
 
-@media screen and (max-width: 1260px) {
-  .destinations {
+  @include media-screen-desktop() {
     padding-top: 70px;
     padding-bottom: 26px;
     background-image: unset;
   }
-}
 
-@media screen and (max-width: 960px) {
-  .destinations {
+  @include small-screen-desktop() {
     padding-top: 20px;
   }
 }
@@ -28,33 +24,42 @@ bottom 50px left 950px;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 41px;
-}
 
-@media screen and (max-width: 960px) {
-  .destinations__wrapper {
+  @include small-screen-desktop() {
     margin-bottom: 25px;
+  }
+
+  @include mobile-screen-desktop() {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
   }
 }
 
 .destinations__title {
   @include title();
+
+  @include mobile-screen-desktop() {
+    @include mobile-title();
+  }
 }
 
 .destinations__link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   font-weight: 600;
   font-size: 17px;
   line-height: 1.3;
-  color: #FB8F1D;
+  color: map-get($colors, "orange");
 }
 
 .destinations__list {
   display: flex;
   gap: 20px;
   justify-content: center;
-}
 
-@media screen and (max-width: 960px) {
-  .destinations__list {
+  @include small-screen-desktop() {
     flex-wrap: wrap;
     justify-content: space-around;
   }
@@ -62,6 +67,10 @@ bottom 50px left 950px;
 
 .destinations__item {
   position: relative;
+
+  @include mobile-screen-desktop() {
+    width: 100%;
+  }
 }
 
 .destinations__image {
@@ -71,27 +80,41 @@ bottom 50px left 950px;
 
 .list__text {
   min-width: 120px;
-  background-color: #ffffff;
+  background-color: map-get($colors, "white");
   border-radius: 0 6px 0 0;
   padding: 11px 22px 2px 0;
   position: absolute;
   left: 0;
   bottom: 0;
+
+  @include mobile-screen-desktop() {
+    min-width: 100px;
+    padding: 10px 10px 0 2px;
+  }
 }
 
 .destinations__subtitle {
   font-weight: 600;
   font-size: 17px;
   line-height: calc(25 / 17);
-  color: #042521;
+  color: map-get($colors, "green");
   margin-bottom: 5px;
+
+  @include mobile-screen-desktop() {
+    font-size: 15px;
+  }
 }
 
 .destinations__text {
-  color: #80918E;
+  color: map-get($colors, "medium-grey-2");
   font-weight: 600;
   font-size: 16px;
-  line-height: calc(25 / 16);
+  line-height: 1.2;
+
+  @include mobile-screen-desktop() {
+    font-size: 14px;
+  }
 }
+
 
 

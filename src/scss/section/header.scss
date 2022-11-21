@@ -1,12 +1,15 @@
 .header {
   padding-top: 58px;
   padding-bottom: 94px;
-}
 
-@media screen and (max-width: 1260px) {
-  .header {
+  @include media-screen-desktop() {
     padding-top: 35px;
     padding-bottom: 60px;
+  }
+
+  @include mobile-screen-desktop() {
+    padding-top: 20px;
+    padding-bottom: 30px;
   }
 }
 
@@ -14,28 +17,33 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include mobile-screen-desktop() {
+    flex-direction: column;
+    gap: 25px;
+  }
 }
 
 .header__nav {
   display: flex;
   gap: 34px;
-}
 
-@media screen and (max-width: 960px) {
-  .header__nav {
+  @include small-screen-desktop() {
     gap: 80px;
   }
-}
 
+  @include mobile-screen-desktop() {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
 
 .header__list {
   display: flex;
   gap: 35px;
   align-items: center;
-}
 
-@media screen and (max-width: 960px) {
-  .header__list {
+  @include small-screen-desktop() {
     gap: 20px;
   }
 }
@@ -44,16 +52,21 @@
   font-weight: 400;
   font-size: 16px;
   line-height: calc(19 / 16);
-  color: map-get($colors,"grey");
+  color: map-get($colors, "grey");
 }
 
 .header__link--first {
-  color: map-get($colors,"blue");
+  color: map-get($colors, "blue");
 }
 
 .header__form {
   display: flex;
   gap: 18px;
+
+  @include mobile-screen-desktop() {
+    gap: 25px;
+    justify-content: center;
+  }
 }
 
 .header__button {
@@ -64,17 +77,19 @@
   font-weight: 500;
   font-size: 15px;
   line-height: 1.2;
-}
 
-@media screen and (max-width: 960px) {
-  .header__button {
+  @include small-screen-desktop() {
     min-width: 100px;
     padding: 10px 20px;
+  }
+
+  @include mobile-screen-desktop() {
+    padding: 7px 20px;
   }
 }
 
 .header__button--first {
-  color: map-get($colors,"orange");
+  color: map-get($colors, "orange");
 }
 
 .header__button--secondary {
