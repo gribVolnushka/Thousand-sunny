@@ -14,10 +14,6 @@
   display: flex;
   gap: 147px;
 
-  @include wide-screen-desktop() {
-    gap: 100px;
-  }
-
   @include small-screen-desktop() {
     gap: 30px;
     flex-wrap: wrap;
@@ -32,10 +28,6 @@
   width: 480px;
   display: flex;
   flex-direction: column;
-
-  @include wide-screen-desktop() {
-    width: 45%;
-  }
 
   @include media-screen-desktop() {
     width: 47%;
