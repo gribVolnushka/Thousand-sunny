@@ -110,7 +110,7 @@
   color: map-get($colors,"black");
   margin-bottom: 13px;
 
-  @include media-screen-desktop() {
+  @include wide-screen-desktop() {
     font-size: 17px;
     display: -webkit-box;
     -webkit-box-orient: vertical ;

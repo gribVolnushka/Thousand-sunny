@@ -35,6 +35,7 @@
   }
 }
 
+
 @media screen and (max-width: 1260px) {
   .world__image {
     width: 47%;
@@ -55,8 +56,13 @@
   }
 
   @include small-screen-desktop() {
-    width: 43%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
+
 }
 
 .world__title {
@@ -65,7 +71,6 @@
 
   @include mobile-screen-desktop() {
     @include mobile-title();
-    text-align: center;
     margin-bottom: 10px;
   }
 }
@@ -83,7 +88,6 @@
   }
 
   @include small-screen-desktop() {
-    text-align: center;
     margin-bottom: 20px;
   }
 
