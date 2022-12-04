@@ -6,17 +6,17 @@
   background-repeat: no-repeat;
   background-position: left 300px bottom 440px, right 800px bottom 180px;
 
-  @include media-screen-desktop() {
+  @include media-tablet-screen() {
     padding-top: 45px;
     padding-bottom: 40px;
     background-image: unset;
   }
 
-  @include small-screen-desktop() {
+  @include media-small-screen() {
     padding-bottom: 10px;
   }
 
-  @include mobile-screen-desktop() {
+  @include media-phone-screen() {
     padding-top: 25px;
   }
 }
@@ -27,7 +27,7 @@
   justify-content: space-between;
   margin-bottom: 26px;
 
-  @include mobile-screen-desktop() {
+  @include media-phone-screen() {
     flex-direction: column;
     margin-bottom: 15px;
   }
@@ -36,9 +36,6 @@
 .stories__title {
   @include title();
 
-  @include mobile-screen-desktop() {
-    @include mobile-title();
-  }
 }
 
 .stories__logo-link {
@@ -46,7 +43,7 @@
   align-items: center;
   gap: 5px;
   font-weight: 600;
-  font-size: 17px;
+  font-size: 1.7rem;
   line-height: 1.2;
   color: map-get($colors,"orange");
 }
@@ -57,12 +54,12 @@
   justify-content: space-between;
   align-items: center;
 
-  @include small-screen-desktop() {
+  @include media-small-screen() {
     flex-wrap: wrap;
     justify-content: space-around;
   }
 
-  @include mobile-screen-desktop() {
+  @include media-phone-screen() {
     flex-direction: column;
   }
 }
@@ -70,11 +67,11 @@
 .stories__item {
   width: 270px;
 
-  @include small-screen-desktop() {
+  @include media-small-screen() {
     width: 37%;
   }
 
-  @include mobile-screen-desktop() {
+  @include media-phone-screen() {
     width: 100%;
   }
 }
@@ -83,13 +80,16 @@
   height: 233px;
   overflow: hidden;
 
-  @include media-screen-desktop() {
+  @include media-tablet-screen() {
     height: 203px;
+  }
+
+  @include media-phone-screen() {
+    height: 100%;
   }
 }
 
 .stories__image {
-  height: 100%;
   width: 100%;
   border-radius: 10px;
 }
@@ -97,7 +97,7 @@
 .stories__list-content {
   padding: 13px 35px 5px 0;
 
-  @include small-screen-desktop() {
+  @include media-small-screen() {
     padding: 7px;
     text-align: center;
   }
@@ -105,32 +105,36 @@
 
 .stories__subtitle {
   font-weight: 700;
-  font-size: 19px;
+  font-size: 1.9rem;
   line-height: calc(30 / 19);
   color: map-get($colors,"black");
   margin-bottom: 13px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical ;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 
-  @include wide-screen-desktop() {
-    font-size: 17px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical ;
-    -webkit-line-clamp: 1;
-    overflow: hidden;
+  @include media-wide-screen-desktop() {
+    font-size: 1.7rem;
   }
 
-  @include small-screen-desktop() {
-    font-size: 16px;
+  @include media-tablet-screen {
+    -webkit-line-clamp: 1;
+  }
+
+  @include media-small-screen() {
+    font-size: 1.6rem;
     margin-bottom: 5px;
   }
 }
 
 .stories__text {
-  font-size: 15px;
+  font-size: 1.5rem;
   line-height: calc(26 / 15);
   margin-bottom: 26px;
   color: map-get($colors,"medium-grey");
 
-  @include media-screen-desktop() {
+  @include media-tablet-screen() {
     margin-bottom: 10px;
     display: -webkit-box;
     -webkit-box-orient: vertical ;
@@ -138,8 +142,8 @@
     overflow: hidden;
   }
 
-  @include mobile-screen-desktop() {
-    font-size: 14px;
+  @include media-phone-screen() {
+    font-size: 1.4rem;
     margin-bottom: 5px;
   }
 }
@@ -148,6 +152,6 @@
   color: map-get($colors,"orange");
   font-style: normal;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 1.5rem;
   line-height: 1.2;
 }

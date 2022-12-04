@@ -5,12 +5,12 @@
   background-repeat: no-repeat;
   background-position: bottom 300px right 550px;
 
-  @include media-screen-desktop() {
+  @include media-tablet-screen() {
     padding-top: 60px;
     padding-bottom: 26px;
   }
 
-  @include small-screen-desktop() {
+  @include media-small-screen() {
     padding-top: 10px;
     background-image: unset;
   }
@@ -21,41 +21,39 @@
   gap: 102px;
   align-items: center;
 
-  @include media-screen-desktop() {
+  @include media-tablet-screen() {
     gap: 70px;
   }
 
-  @include small-screen-desktop() {
+  @include media-small-screen() {
     gap: 30px;
     flex-direction: column-reverse;
   }
 
-  @include mobile-screen-desktop() {
+  @include media-phone-screen() {
     gap: 20px;
   }
 }
 
+.world__image {
 
-@media screen and (max-width: 1260px) {
-  .world__image {
-    width: 47%;
-  }
-}
+  @include media-tablet-screen() {
+      width: 47%;
+    }
 
-@media screen and (max-width: 960px) {
-  .world__image {
-    width: 100%;
-  }
+  @include media-small-screen() {
+      width: 100%;
+    }
 }
 
 .world__content {
   width: 480px;
 
-  @include media-screen-desktop() {
+  @include media-tablet-screen() {
     width: 43%;
   }
 
-  @include small-screen-desktop() {
+  @include media-small-screen() {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -69,44 +67,38 @@
   @include title();
   margin-bottom: 20px;
 
-  @include mobile-screen-desktop() {
-    @include mobile-title();
+  @include media-phone-screen() {
     margin-bottom: 10px;
   }
 }
 
 .world__text {
   font-weight: 300;
-  font-size: 17px;
+  font-size: 1.7rem;
   line-height: calc(30 / 17);
   color: map-get($colors,"medium-grey");
   margin-bottom: 39px;
 
-  @include media-screen-desktop() {
-    font-size: 19px;
+  @include media-tablet-screen() {
+    font-size: 1.9rem;
     margin-bottom: 29px;
   }
 
-  @include small-screen-desktop() {
+  @include media-small-screen() {
     margin-bottom: 20px;
   }
 
-  @include mobile-screen-desktop() {
-    font-size: 17px;
+  @include media-phone-screen() {
+    font-size: 1.7rem;
     margin-bottom: 10px;
   }
 }
 
 .world__button {
-  @include button();
   min-width: 164px;
   padding: 10px 37px 10px 39px;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1.5;
 
-  @include mobile-screen-desktop() {
+  @include media-phone-screen() {
     width: 150px;
     padding: 10px 30px;
     line-height: 1.2;

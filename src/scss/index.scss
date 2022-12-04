@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 @import "utils/reset";
-@import "section/mixin";
+@import "section/mixins/media-mixin";
+@import "section/mixins/mixin";
+@import "utils/variables";
 @import "general";
-@import "section/map";
 @import "section/header";
 @import "section/hero";
 @import "section/world";

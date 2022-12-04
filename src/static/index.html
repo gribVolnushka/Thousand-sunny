@@ -5,15 +5,16 @@
   <meta name='viewport'
         content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
   <meta http-equiv='X-UA-Compatible' content='ie=edge'>
-  <title>Document</title>
+  <title>Thousand-Sunny</title>
+  <link  rel='stylesheet' href='../scss/custom-properties.css'>
 </head>
 <body>
 
 <div class='hero'>
 <!--start Header-->
-  <header  class='header'>
+  <header class='header'>
 
-    <div  class='container-lg container__header'>
+    <div class='container-lg container__header'>
 
       <a href='' class='header__logo'>
         <img class='image__logo' src='Image/logo.svg' alt=''>
@@ -23,7 +24,7 @@
 
         <ul class='header__list'>
           <li class='header__item'>
-            <a href='' class='header__link header__link--first'>
+            <a href='' class='header__link header__link--primary'>
               Home
             </a>
           </li>
@@ -44,16 +45,16 @@
           </li>
         </ul>
 
-        <form  class='header__form'>
-          <button  type='submit' class='header__button header__button--first'>
-            Login
-          </button>
-          <button  type='submit' class='header__button header__button--secondary'>
-            Register
-          </button>
-        </form>
-
       </nav>
+
+      <div class='header__wrapper-button'>
+        <button  type='submit' class='header__button header__button--outline'>
+          Login
+        </button>
+        <button  type='submit' class='header__button header__button--primary'>
+          Register
+        </button>
+      </div>
 
     </div>
   </header>
@@ -65,7 +66,7 @@
     <div class='container-lg container__hero'>
 
 
-      <div  class='hero__content'>
+      <div class='hero__content'>
         <h1 class='hero__title'>
           Explore and
           Travel
@@ -86,16 +87,15 @@
           <select class='hero__select' name='select'>
             <option class='hero__option' value=''>Grade</option>
           </select>
-          <select  class='hero__select' name='select'>
+          <select class='hero__select' name='select'>
             <option class='hero__option' value=''>Date</option>
           </select>
 
-
+          <button type='submit' class='hero__button button'>
+            Explore
+          </button>
         </form>
 
-        <button  type='submit' class='hero__button'>
-          Explore
-        </button>
       </div>
 
       <img  class='hero__image' src='Image/hero__image.jpg' alt=''>
@@ -117,12 +117,12 @@
            A new way to explore the world
         </h2>
 
-        <p  class='world__text'>
+        <p class='world__text'>
           For decades travellers have reached for Lonely Planet books when looking to plan and execute their perfect
           trip, but now, they can also let Lonely Planet Experiences lead the way
         </p>
 
-        <button type='submit' class='world__button'>
+        <button type='submit' class='world__button button'>
           Learn more
         </button>
       </div>
@@ -140,7 +140,7 @@
           Featured destinations
         </h2>
 
-        <a  class='destinations__link' href=''>
+        <a class='destinations__link' href=''>
           Viev all
           <img src='Image/arrow.svg' alt=''>
         </a>
@@ -150,7 +150,7 @@
         <li class='destinations__item'>
           <img class='destinations__image' src='Image/island.jpg' alt='Island'>
 
-          <div class='list__text'>
+          <div  class='destinations__wrapper-content'>
             <h3 class='destinations__subtitle'>
               Raja Ampat
             </h3>
@@ -163,7 +163,7 @@
         <li class='destinations__item'>
           <img class='destinations__image' src='Image/rock.jpg' alt='Rock'>
 
-          <div class='list__text'>
+          <div class='destinations__wrapper-content'>
             <h3 class='destinations__subtitle'>
               Fanjingshan
             </h3>
@@ -176,7 +176,7 @@
         <li class='destinations__item'>
           <img class='destinations__image' src='Image/sea__and__mountains.jpg' alt='Sea and mountains'>
 
-          <div class='list__text'>
+          <div class='destinations__wrapper-content'>
             <h3 class='destinations__subtitle'>
               Vevey
             </h3>
@@ -189,7 +189,7 @@
         <li class='destinations__item'>
           <img class='destinations__image' src='Image/valley.jpg' alt='Valley'>
 
-          <div class='list__text'>
+          <div class='destinations__wrapper-content'>
             <h3 class='destinations__subtitle'>
               Skadar
             </h3>
@@ -220,7 +220,7 @@
           ultimate resource before and during a trip.
         </p>
 
-        <button type='submit' class='guides__button'>
+        <button type='submit' class='guides__button button'>
           Download
         </button>
 
@@ -260,11 +260,11 @@
             Morbi blandit sit amet turpis nec”
           </blockquote>
 
-          <p class='testimonials__text'>
+          <p class='testimonials__content--author'>
             Edward Newgate
           </p>
 
-          <p class='testimonials__paragraph'>
+          <p class='testimonials__content--position'>
             Founder Circle
           </p>
         </div>
@@ -532,7 +532,6 @@
         </ul>
       </div>
 
-      <div class='footer__border'></div>
 
       <ul class='footer__column footer__link-column'>
         <li class='footer__item'>
@@ -540,7 +539,7 @@
             <img src='Image/twitter.svg' alt='Twitter icon' class='footer__image-icon'>
           </a>
         </li>
-        <li class='footer__item'>
+        <li  class='footer__item'>
           <a class='footer__link-icon' href=''>
             <img src='Image/facebook.svg' alt='facebook icon' class='footer__image-icon'>
           </a>

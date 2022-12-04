@@ -8,13 +8,13 @@
   background-position: left 490px top 175px, right 300px top 135px,
                        bottom 250px left 850px;
 
-  @include media-screen-desktop() {
+  @include media-tablet-screen() {
     padding-top: 40px;
     padding-bottom: 20px;
     background-image: unset;
   }
 
-  @include mobile-screen-desktop() {
+  @include media-phone-screen() {
     padding-top: 10px;
   }
 }
@@ -24,12 +24,12 @@
   justify-content: space-between;
   align-items: center;
 
-  @include small-screen-desktop() {
+  @include media-small-screen() {
     flex-wrap: wrap;
     gap: 20px;
   }
 
-  @include mobile-screen-desktop() {
+  @include media-phone-screen() {
     flex-direction: column;
   }
 }
@@ -37,11 +37,11 @@
 .guides__content {
   width: 410px;
 
-  @include media-screen-desktop() {
+  @include media-tablet-screen() {
     width: 40%;
   }
 
-  @include small-screen-desktop() {
+  @include media-small-screen() {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -54,56 +54,50 @@
   @include title();
   margin-bottom: 20px;
 
-  @include mobile-screen-desktop() {
-    @include mobile-title();
+  @include media-phone-screen() {
     margin-bottom: 10px;
   }
 }
 
 .guides__text {
   font-weight: 300;
-  font-size: 17px;
+  font-size: 1.7rem;
   line-height: calc(30 / 17);
   color: map-get($colors,"medium-grey");
   margin-bottom: 39px;
 
-  @include media-screen-desktop() {
-    font-size: 19px;
+  @include media-tablet-screen() {
+    font-size: 1.9rem;
     margin-bottom: 29px;
   }
 
-  @include small-screen-desktop() {
+  @include media-small-screen() {
     margin-bottom: 20px;
   }
 
-  @include mobile-screen-desktop() {
+  @include media-phone-screen() {
     margin-bottom: 20px;
   }
 }
 
 .guides__button {
-  @include button();
   min-width: 164px;
-  padding:  13px 43px;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1.2;
-  border-radius: 8px;
+  padding: 13px 43px;
 
-  @include mobile-screen-desktop() {
+  @include media-phone-screen() {
     width: 150px;
     padding: 10px 30px;
   }
 }
 
-@media screen and (max-width: 1260px) {
-  .guides__image {
-    width: 55%;
-  }
+.guides__image {
+  @include media-tablet-screen() {
+      width: 55%;
+    }
+
+  @include media-small-screen() {
+      width: 100%;
+    }
 }
 
-@media screen and (max-width: 960px) {
-  .guides__image {
-    width: 100%;
-  }
-}
+

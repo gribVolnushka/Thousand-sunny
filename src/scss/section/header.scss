@@ -2,12 +2,12 @@
   padding-top: 58px;
   padding-bottom: 94px;
 
-  @include media-screen-desktop() {
+  @include media-tablet-screen() {
     padding-top: 35px;
     padding-bottom: 60px;
   }
 
-  @include mobile-screen-desktop() {
+  @include media-phone-screen() {
     padding-top: 20px;
     padding-bottom: 30px;
   }
@@ -18,7 +18,7 @@
   align-items: center;
   justify-content: space-between;
 
-  @include mobile-screen-desktop() {
+  @include media-phone-screen() {
     flex-direction: column;
     gap: 25px;
   }
@@ -26,15 +26,9 @@
 
 .header__nav {
   display: flex;
-  gap: 34px;
 
-  @include small-screen-desktop() {
-    gap: 80px;
-  }
-
-  @include mobile-screen-desktop() {
+  @include media-phone-screen() {
     flex-direction: column;
-    gap: 25px;
   }
 }
 
@@ -43,27 +37,27 @@
   gap: 35px;
   align-items: center;
 
-  @include small-screen-desktop() {
+  @include media-small-screen() {
     gap: 20px;
   }
 }
 
 .header__link {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: calc(19 / 16);
   color: map-get($colors, "grey");
 }
 
-.header__link--first {
+.header__link--primary {
   color: map-get($colors, "blue");
 }
 
-.header__form {
+.header__wrapper-button {
   display: flex;
   gap: 18px;
 
-  @include mobile-screen-desktop() {
+  @include media-phone-screen() {
     gap: 25px;
     justify-content: center;
   }
@@ -75,23 +69,24 @@
   border-radius: 8px;
   padding: 10px 46px;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 1.5rem;
   line-height: 1.2;
 
-  @include small-screen-desktop() {
+  @include media-small-screen() {
     min-width: 100px;
     padding: 10px 20px;
   }
 
-  @include mobile-screen-desktop() {
+  @include media-phone-screen() {
     padding: 7px 20px;
   }
 }
 
-.header__button--first {
+.header__button--outline {
   color: map-get($colors, "orange");
 }
 
-.header__button--secondary {
-  @include button();
+.header__button--primary {
+  color: #FFFFFF;
+  background-color: #FB8F1D;
 }

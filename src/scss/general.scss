@@ -12,15 +12,15 @@ html {
   margin-left: auto;
   margin-right: auto;
 
-  @include wide-screen-desktop() {
+  @include media-wide-screen-desktop() {
     width: 90%;
   }
 
-  @include small-screen-desktop() {
+  @include media-small-screen() {
     width: 87%;
   }
 
-  @include mobile-screen-desktop() {
+  @include media-phone-screen() {
     width: 92%;
   }
 }
@@ -30,11 +30,11 @@ html {
   margin-right: auto;
   margin-left: auto;
 
-  @include media-screen-desktop() {
+  @include media-tablet-screen() {
     width: 95%;
   }
 
-  @include small-screen-desktop() {
+  @include media-small-screen() {
     width: 90%;
   }
 }
@@ -44,25 +44,57 @@ html {
   margin-left: auto;
   margin-right: auto;
 
-  @include media-screen-desktop() {
+  @include media-tablet-screen() {
     width: 90%;
   }
 
-  @include small-screen-desktop() {
+  @include media-small-screen() {
     width: 85%;
   }
 
-  @include mobile-screen-desktop() {
+  @include media-phone-screen() {
     width: 90%;
   }
 }
 
   .hero {
+    min-height: 100vh;
     background-image: url("../static/Image/circle.svg"),
                       url("../static/Image/circle.svg");
     background-repeat: no-repeat;
     background-position: bottom 475px left 230px, bottom 160px left 930px ;
   }
+
+.hero__title {
+  color: map-get($colors,"blue");
+  font-weight: 700;
+  font-size: 6.4rem;
+  line-height: 1.2;
+  margin-bottom: 74px;
+
+  @include media-tablet-screen() {
+    font-size: 5.4rem;
+  }
+
+  @include media-small-screen() {
+    margin-bottom: 25px;
+  }
+
+  @include media-phone-screen() {
+    font-size: 4.2rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+
+.button {
+  color: #FFFFFF;
+  background-color: #FB8F1D;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
 
 
 

@@ -1,0 +1,17 @@
+@mixin title() {
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: calc(50 / 36);
+  color: #000000;
+
+  @include media-phone-screen() {
+    font-size: 3rem;
+    line-height: 1.2;
+    color: #000000;
+    font-weight: 700;
+  }
+}
+
+
+
+
